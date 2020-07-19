@@ -9,6 +9,6 @@ package hn.uth.poo.p3.objetos;
  *
  * @author Alexander
  */
-public interface IBienesInmuebles {
+public class BienesInmuebles {
     
 }

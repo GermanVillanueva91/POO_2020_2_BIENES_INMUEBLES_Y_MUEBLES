@@ -9,7 +9,6 @@ package hn.uth.poo.p3.objetos;
  *
  * @author Alexander
  */
-public class Registro {
-    private int NumeroRegisto;
+public class Bienes {
     
 }
