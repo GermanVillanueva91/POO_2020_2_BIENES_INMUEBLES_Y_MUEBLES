@@ -11,4 +11,7 @@ package hn.uth.poo.p3.objetos;
  */
 public interface IBienesInmuebles {
     
+    
+    double CalcularPagoInmueble(double pago);
+    
 }
