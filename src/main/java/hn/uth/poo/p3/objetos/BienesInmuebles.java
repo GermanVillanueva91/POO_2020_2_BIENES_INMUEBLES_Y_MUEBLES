@@ -15,6 +15,7 @@ public abstract class BienesInmuebles extends Bienes implements IBienesInmuebles
 //   private int Codigo;
    private double Area;
    private String CiudadPropiedad;
+   private String Hola;
 //   private Date FechaAdquisicion;
 //   private double Valor;
 
