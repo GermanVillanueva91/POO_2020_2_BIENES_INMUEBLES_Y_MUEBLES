@@ -7,11 +7,8 @@ package hn.uth.poo.p3.objetos;
 
 /**
  *
- * @author Alexander
+ * @author Buddys
  */
-public interface IBienesInmuebles {
-    
-    
-    double CalcularPagoInmueble(double pago);
-    
+public interface IHistorial {
+    double CalculoPagosTotales();
 }

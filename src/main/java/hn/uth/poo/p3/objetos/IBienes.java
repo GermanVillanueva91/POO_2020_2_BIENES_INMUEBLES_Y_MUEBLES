@@ -9,7 +9,9 @@ package hn.uth.poo.p3.objetos;
  *
  * @author Alexander
  */
-public interface IBienesMuebles {
-    double CalcularPagoMueble(double pago);
+public interface IBienes {
+    
+    
+    double CalcularPagoInmueble(double pago);
     
 }

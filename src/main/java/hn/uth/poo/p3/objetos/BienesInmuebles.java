@@ -11,73 +11,39 @@ import java.util.Date;
  *
  * @author Alexander
  */
-public abstract class BienesInmuebles extends Bienes implements IBienesInmuebles {
-//   private int Codigo;
+public abstract class BienesInmuebles extends Bienes implements IBienes {
    private double Area;
    private String CiudadPropiedad;
-   private String Hola;
-//   private Date FechaAdquisicion;
-//   private double Valor;
 
-//    public BienesInmuebles() {
-//        super();
-//    }
-//
-//    public BienesInmuebles(int Codigo, double Area, String CiudadPropiedad, Date FechaAdquisicion, double Valor, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago) {
-//        super(FechaPago, CantidadPago, CodigoFactura, CiudadPago);
-//        this.Codigo = Codigo;
-//        this.Area = Area;
-//        this.CiudadPropiedad = CiudadPropiedad;
-//        this.FechaAdquisicion = FechaAdquisicion;
-//        this.Valor = Valor;
-//    }
-//
-//    public int getCodigo() {
-//        return Codigo;
-//    }
-//
-//    public void setCodigo(int Codigo) {
-//        this.Codigo = Codigo;
-//    }
-//
-//    public double getArea() {
-//        return Area;
-//    }
-//
-//    public void setArea(double Area) {
-//        this.Area = Area;
-//    }
-//
-//    public String getCiudadPropiedad() {
-//        return CiudadPropiedad;
-//    }
-//
-//    public void setCiudadPropiedad(String CiudadPropiedad) {
-//        this.CiudadPropiedad = CiudadPropiedad;
-//    }
-//
-//    public Date getFechaAdquisicion() {
-//        return FechaAdquisicion;
-//    }
-//
-//    public void setFechaAdquisicion(Date FechaAdquisicion) {
-//        this.FechaAdquisicion = FechaAdquisicion;
-//    }
-//
-//    public double getValor() {
-//        return Valor;
-//    }
-//
-//    public void setValor(double Valor) {
-//        this.Valor = Valor;
-//    }
-//
-//    @Override
-//    public String toString() {
-//        return super.toString().concat("Codigo: ").concat(String.valueOf(Codigo)).concat("-Area: ").
-//              concat(String.valueOf(Area).concat("-Ciudad de la propiedad: ").concat(CiudadPropiedad).
-//              concat("-Fecha de Adquisicion: ").concat(String.valueOf(FechaAdquisicion)).concat("-Valor: ").concat(String.valueOf(Valor)));
-//   
-//    }
+    public BienesInmuebles(double Area, String CiudadPropiedad, String Nombre, String Nacionalidad, long Id, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, int Codigo, Date FechaAdquisicion, double Valor, String Direccion) {
+        super(Nombre, Nacionalidad, Id, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion);
+        this.Area = Area;
+        this.CiudadPropiedad = CiudadPropiedad;
+    }
+
     
+    public BienesInmuebles() {
+        super();
+    }
+
+    public double getArea() {
+        return Area;
+    }
+
+    public void setArea(double Area) {
+        this.Area = Area;
+    }
+
+    public String getCiudadPropiedad() {
+        return CiudadPropiedad;
+    }
+
+    public void setCiudadPropiedad(String CiudadPropiedad) {
+        this.CiudadPropiedad = CiudadPropiedad;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString().concat("-Area Propiedad: ").concat(String.valueOf(Area)).concat("-Ciudad de la Propiedad: ").concat(CiudadPropiedad); 
+    }
 }
