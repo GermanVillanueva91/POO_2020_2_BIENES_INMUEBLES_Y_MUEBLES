@@ -68,13 +68,5 @@ public class Persona {
     public void setFechaNacimiento(Date FechaNacimiento) {
         this.FechaNacimiento = FechaNacimiento;
     }
-
-    @Override
-    public String toString() {
-        return ("Nombre").concat(Nombre).concat("-Id").concat(String.valueOf(Id).concat("-Ciudad")
-                .concat(Ciudad).concat("-Estado Civil ").concat(EstadoCivil).concat("-Fecha Nacimiento")
-                .concat(String.valueOf(FechaNacimiento)));
-    }
-    
     
 }
