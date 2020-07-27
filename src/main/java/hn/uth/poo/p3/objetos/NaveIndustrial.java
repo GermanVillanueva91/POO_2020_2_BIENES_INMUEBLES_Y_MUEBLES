@@ -17,18 +17,30 @@ public class NaveIndustrial extends BienesInmuebles {
     private int numeroMaquinarias;
     private int numeroOficina;
     private int numeroTrabjadores;
+    private int numeroNave;
+
+    
     static final double ISV = 0.15;
 
-    public NaveIndustrial(String JefeInterno, int numeroMaquinarias, int numeroOficina, int numeroTrabjadores, double Area, String CiudadPropiedad, String Coordenadas, String ColindaN, String ColindaS, String ColindaE, String ColindaO, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
+    public NaveIndustrial(String JefeInterno, int numeroMaquinarias, int numeroOficina, int numeroTrabjadores, int numeroNave, double Area, String CiudadPropiedad, String Coordenadas, String ColindaN, String ColindaS, String ColindaE, String ColindaO, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
         super(Area, CiudadPropiedad, Coordenadas, ColindaN, ColindaS, ColindaE, ColindaO, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion, Propietarios, notario);
         this.JefeInterno = JefeInterno;
         this.numeroMaquinarias = numeroMaquinarias;
         this.numeroOficina = numeroOficina;
         this.numeroTrabjadores = numeroTrabjadores;
-    }
+        this.numeroNave = numeroNave;
+    }    
 
     public NaveIndustrial() {
         super();
+    }
+    
+    public int getNumeroNave() {
+        return numeroNave;
+    }
+
+    public void setNumeroNave(int numeroNave) {
+        this.numeroNave = numeroNave;
     }
 
     public String getJefeInterno() {
