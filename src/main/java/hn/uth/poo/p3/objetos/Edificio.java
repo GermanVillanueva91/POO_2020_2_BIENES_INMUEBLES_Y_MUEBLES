@@ -5,6 +5,7 @@
  */
 package hn.uth.poo.p3.objetos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -20,8 +21,8 @@ public class Edificio extends BienesInmuebles {
     static final double ISV = 0.15;
     private long numeroEdificio;
 
-    public Edificio(long numeroEdificio,int numeroDePisos, int cantidadLocales, String Color, String NombreEdificio, boolean UsoActual, double Area, String CiudadPropiedad, String Nombre, String Nacionalidad, long Id, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, int Codigo, Date FechaAdquisicion, double Valor, String Direccion) {
-        super(Area, CiudadPropiedad, Nombre, Nacionalidad, Id, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion);
+    public Edificio(int numeroDePisos, int cantidadLocales, String Color, String NombreEdificio, boolean UsoActual, long numeroEdificio, double Area, String CiudadPropiedad, String Coordenadas, String ColindaN, String ColindaS, String ColindaE, String ColindaO, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
+        super(Area, CiudadPropiedad, Coordenadas, ColindaN, ColindaS, ColindaE, ColindaO, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion, Propietarios, notario);
         this.numeroDePisos = numeroDePisos;
         this.cantidadLocales = cantidadLocales;
         this.Color = Color;
@@ -30,6 +31,7 @@ public class Edificio extends BienesInmuebles {
         this.numeroEdificio = numeroEdificio;
     }
 
+    
     public long getNumeroEdificio() {
         return numeroEdificio;
     }

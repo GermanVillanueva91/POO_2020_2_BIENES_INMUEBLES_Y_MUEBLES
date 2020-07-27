@@ -5,6 +5,7 @@
  */
 package hn.uth.poo.p3.objetos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -18,8 +19,8 @@ public class NaveIndustrial extends BienesInmuebles {
     private int numeroTrabjadores;
     static final double ISV = 0.15;
 
-    public NaveIndustrial(String JefeInterno, int numeroMaquinarias, int numeroOficina, int numeroTrabjadores, double Area, String CiudadPropiedad, String Nombre, String Nacionalidad, long Id, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, int Codigo, Date FechaAdquisicion, double Valor, String Direccion) {
-        super(Area, CiudadPropiedad, Nombre, Nacionalidad, Id, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion);
+    public NaveIndustrial(String JefeInterno, int numeroMaquinarias, int numeroOficina, int numeroTrabjadores, double Area, String CiudadPropiedad, String Coordenadas, String ColindaN, String ColindaS, String ColindaE, String ColindaO, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
+        super(Area, CiudadPropiedad, Coordenadas, ColindaN, ColindaS, ColindaE, ColindaO, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion, Propietarios, notario);
         this.JefeInterno = JefeInterno;
         this.numeroMaquinarias = numeroMaquinarias;
         this.numeroOficina = numeroOficina;

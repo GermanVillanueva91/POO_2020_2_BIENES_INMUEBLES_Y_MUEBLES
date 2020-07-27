@@ -5,6 +5,7 @@
  */
 package hn.uth.poo.p3.objetos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -18,14 +19,15 @@ public class Casa extends BienesInmuebles{
     private int numeroCasa;
     static final double ISV = 0.15;
 
-    public Casa(int numeroHabitantes,int numeroHabitaciones, String colorCasa, int numeroCasa, double Area, String CiudadPropiedad, String Nombre, String Nacionalidad, long Id, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, int Codigo, Date FechaAdquisicion, double Valor, String Direccion) {
-        super(Area, CiudadPropiedad, Nombre, Nacionalidad, Id, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion);
+    public Casa(int numeroHabitantes, int numeroHabitaciones, String colorCasa, int numeroCasa, double Area, String CiudadPropiedad, String Coordenadas, String ColindaN, String ColindaS, String ColindaE, String ColindaO, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
+        super(Area, CiudadPropiedad, Coordenadas, ColindaN, ColindaS, ColindaE, ColindaO, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion, Propietarios, notario);
         this.numeroHabitantes = numeroHabitantes;
         this.numeroHabitaciones = numeroHabitaciones;
         this.colorCasa = colorCasa;
         this.numeroCasa = numeroCasa;
     }
 
+   
     public Casa() {
         super();
     }

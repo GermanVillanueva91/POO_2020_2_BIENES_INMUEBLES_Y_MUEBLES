@@ -5,6 +5,7 @@
  */
 package hn.uth.poo.p3.objetos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -18,8 +19,8 @@ public class Motocicleta extends BienesMuebles {
     private int numeroCambios;
     static final double ISV = 0.15;
 
-    public Motocicleta(int numeroRuedas, String TipoTransmision, double peso, int numeroCambios, String TipoMotor, String NumeroPlaca, boolean Aereo_Terrestre, String Marca, String NumeroSerieMotor, String Color, Date FechaFabricacion, String Nombre, String Nacionalidad, long Id, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, int Codigo, Date FechaAdquisicion, double Valor, String Direccion) {
-        super(TipoMotor, NumeroPlaca, Aereo_Terrestre, Marca, NumeroSerieMotor, Color, FechaFabricacion, Nombre, Nacionalidad, Id, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion);
+    public Motocicleta(int numeroRuedas, String TipoTransmision, double peso, int numeroCambios, String NumeroPlaca, String NumeroSerieMotor, String Color, Date FechaFabricacion, String Marca, String TipoMotor, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
+        super(NumeroPlaca, NumeroSerieMotor, Color, FechaFabricacion, Marca, TipoMotor, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion, Propietarios, notario);
         this.numeroRuedas = numeroRuedas;
         this.TipoTransmision = TipoTransmision;
         this.peso = peso;

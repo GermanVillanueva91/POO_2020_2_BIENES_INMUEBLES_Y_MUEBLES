@@ -5,6 +5,7 @@
  */
 package hn.uth.poo.p3.objetos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -17,8 +18,8 @@ public class Terreno extends BienesInmuebles{
     private String UsoTerreno;
     static final double ISV = 0.15;
 
-    public Terreno(String Descripcion, String TipoCerco, String UsoTerreno, double Area, String CiudadPropiedad, String Nombre, String Nacionalidad, long Id, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, int Codigo, Date FechaAdquisicion, double Valor, String Direccion) {
-        super(Area, CiudadPropiedad, Nombre, Nacionalidad, Id, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion);
+    public Terreno(String Descripcion, String TipoCerco, String UsoTerreno, double Area, String CiudadPropiedad, String Coordenadas, String ColindaN, String ColindaS, String ColindaE, String ColindaO, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
+        super(Area, CiudadPropiedad, Coordenadas, ColindaN, ColindaS, ColindaE, ColindaO, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion, Propietarios, notario);
         this.Descripcion = Descripcion;
         this.TipoCerco = TipoCerco;
         this.UsoTerreno = UsoTerreno;

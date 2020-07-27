@@ -5,6 +5,7 @@
  */
 package hn.uth.poo.p3.objetos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -23,8 +24,8 @@ public class Camion extends BienesMuebles {
         super();
     }
 
-    public Camion(String TipoCamion, int CapacidadCarga, int NumeroLlantas, int NumeroPuertas, double Peso, String TipoMotor, String NumeroPlaca, boolean Aereo_Terrestre, String Marca, String NumeroSerieMotor, String Color, Date FechaFabricacion, String Nombre, String Nacionalidad, long Id, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, int Codigo, Date FechaAdquisicion, double Valor, String Direccion) {
-        super(TipoMotor, NumeroPlaca, Aereo_Terrestre, Marca, NumeroSerieMotor, Color, FechaFabricacion, Nombre, Nacionalidad, Id, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion);
+    public Camion(String TipoCamion, int CapacidadCarga, int NumeroLlantas, int NumeroPuertas, double Peso, String NumeroPlaca, String NumeroSerieMotor, String Color, Date FechaFabricacion, String Marca, String TipoMotor, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
+        super(NumeroPlaca, NumeroSerieMotor, Color, FechaFabricacion, Marca, TipoMotor, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion, Propietarios, notario);
         this.TipoCamion = TipoCamion;
         this.CapacidadCarga = CapacidadCarga;
         this.NumeroLlantas = NumeroLlantas;

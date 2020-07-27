@@ -5,6 +5,7 @@
  */
 package hn.uth.poo.p3.objetos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -12,25 +13,22 @@ import java.util.Date;
  * @author Alexander
  */
 public class Bienes {
-    private String Nombre;
-    private String Nacionalidad;
-    private long Id;
+    
     private Date FechaPago;
     private double CantidadPago;
     private long CodigoFactura;
     private String CiudadPago;
-    private int Codigo;
+    private String Codigo;//STRING
     private Date FechaAdquisicion;
     private double Valor;
     private String Direccion;
+    private ArrayList<Persona> Propietarios;
+    private Notario notario;
 
     public Bienes() {
     }
 
-    public Bienes(String Nombre, String Nacionalidad, long Id, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, int Codigo, Date FechaAdquisicion, double Valor,String Direccion) {
-        this.Nombre = Nombre;
-        this.Nacionalidad = Nacionalidad;
-        this.Id = Id;
+    public Bienes(Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
         this.FechaPago = FechaPago;
         this.CantidadPago = CantidadPago;
         this.CodigoFactura = CodigoFactura;
@@ -39,31 +37,26 @@ public class Bienes {
         this.FechaAdquisicion = FechaAdquisicion;
         this.Valor = Valor;
         this.Direccion = Direccion;
+        this.Propietarios = Propietarios;
+        this.notario = notario;
     }
 
-    public String getNombre() {
-        return Nombre;
+    public ArrayList<Persona> getPropietarios() {
+        return Propietarios;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setPropietarios(ArrayList<Persona> Propietarios) {
+        this.Propietarios = Propietarios;
     }
 
-    public String getNacionalidad() {
-        return Nacionalidad;
+    public Notario getNotario() {
+        return notario;
     }
 
-    public void setNacionalidad(String Nacionalidad) {
-        this.Nacionalidad = Nacionalidad;
+    public void setNotario(Notario notario) {
+        this.notario = notario;
     }
-
-    public long getId() {
-        return Id;
-    }
-
-    public void setId(long Id) {
-        this.Id = Id;
-    }
+    
 
     public String getDireccion() {
         return Direccion;
@@ -73,11 +66,11 @@ public class Bienes {
         this.Direccion = Direccion;
     }
 
-   public int getCodigo() {
+   public String getCodigo() {
         return Codigo;
     }
 
-    public void setCodigo(int Codigo) {
+    public void setCodigo(String Codigo) {
         this.Codigo = Codigo;
     }
 
@@ -132,8 +125,7 @@ public class Bienes {
     
     @Override
     public String toString() {
-        return super.toString().concat("-Nombre del duenoño: ").concat(Nombre).concat("-Naionalidad").concat(Nacionalidad).concat("-ID:").concat(String.valueOf(Id))
-                .concat("Ciudad de Pago ").concat(CiudadPago).concat("-Fecha de Pago: ").concat(String.valueOf(FechaPago).
+        return super.toString().concat("Ciudad de Pago ").concat(CiudadPago).concat("-Fecha de Pago: ").concat(String.valueOf(FechaPago).
                  concat("-Cantidad a pagar").concat(String.valueOf(CantidadPago))).concat("-Codigo Factura: ").concat(String.valueOf(CodigoFactura))
                 .concat("-Fecha Adquisicion").concat(String.valueOf(FechaAdquisicion)).concat(CiudadPago).concat("-Codigo").concat(String.valueOf(Codigo))
                 .concat("-Valor del Bien:").concat(String.valueOf(Valor)); 

@@ -5,6 +5,7 @@
  */
 package hn.uth.poo.p3.objetos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -13,28 +14,35 @@ import java.util.Date;
  */
 public abstract class BienesMuebles extends Bienes implements IBienes{
     private String NumeroPlaca;
-    private boolean Aereo_Terrestre;
-    private String Marca;
     private String NumeroSerieMotor;  
     private String Color;  
     private Date FechaFabricacion;
     private String TipoMotor;
+    private String Marca;
 
     public BienesMuebles() {
         super();
     }
 
-    public BienesMuebles(String TipoMotor,String NumeroPlaca, boolean Aereo_Terrestre, String Marca, String NumeroSerieMotor, String Color, Date FechaFabricacion, String Nombre, String Nacionalidad, long Id, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, int Codigo, Date FechaAdquisicion, double Valor, String Direccion) {
-        super(Nombre, Nacionalidad, Id, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion);
+    public BienesMuebles(String NumeroPlaca, String NumeroSerieMotor, String Color, Date FechaFabricacion,String Marca, String TipoMotor, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
+        super(FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion, Propietarios, notario);
         this.NumeroPlaca = NumeroPlaca;
-        this.Aereo_Terrestre = Aereo_Terrestre;
-        this.Marca = Marca;
         this.NumeroSerieMotor = NumeroSerieMotor;
         this.Color = Color;
         this.FechaFabricacion = FechaFabricacion;
         this.TipoMotor = TipoMotor;
+        this.Marca = Marca;
     }
 
+    public String getMarca() {
+        return Marca;
+    }
+
+    public void setMarca(String Marca) {
+        this.Marca = Marca;
+    }
+
+    
     public String getTipoMotor() {
         return TipoMotor;
     }
@@ -50,22 +58,6 @@ public abstract class BienesMuebles extends Bienes implements IBienes{
 
     public void setNumeroPlaca(String NumeroPlaca) {
         this.NumeroPlaca = NumeroPlaca;
-    }
-
-    public boolean isAereo_Terrestre() {
-        return Aereo_Terrestre;
-    }
-
-    public void setAereo_Terrestre(boolean Aereo_Terrestre) {
-        this.Aereo_Terrestre = Aereo_Terrestre;
-    }
-
-    public String getMarca() {
-        return Marca;
-    }
-
-    public void setMarca(String Marca) {
-        this.Marca = Marca;
     }
 
     public String getNumeroSerieMotor() {
@@ -95,7 +87,7 @@ public abstract class BienesMuebles extends Bienes implements IBienes{
     @Override
     public String toString() {
         return super.toString().concat("-Numero de Placa").concat(String.valueOf(NumeroPlaca)).concat("-Numero de serie del motor").concat(String.valueOf(NumeroSerieMotor))
-                .concat("-Marca del Medio: ").concat(Marca).concat("-Tipo de Medio (Aereo o Terrestre): ").concat(String.valueOf(Aereo_Terrestre)).concat("-Fecha de Fabricacion").concat(String.valueOf(FechaFabricacion))
+                .concat("-Marca del Medio: ").concat("-Fecha de Fabricacion").concat(String.valueOf(FechaFabricacion))
                 .concat("-Color del Medio: ").concat(Color); 
     }
 
