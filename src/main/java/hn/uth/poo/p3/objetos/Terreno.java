@@ -16,17 +16,29 @@ public class Terreno extends BienesInmuebles{
     private String Descripcion;
     private String TipoCerco;
     private String UsoTerreno;
+    private int numeroPropiedad;
+
+        
     static final double ISV = 0.15;
 
-    public Terreno(String Descripcion, String TipoCerco, String UsoTerreno, double Area, String CiudadPropiedad, String Coordenadas, String ColindaN, String ColindaS, String ColindaE, String ColindaO, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
+    public Terreno(String Descripcion, String TipoCerco, String UsoTerreno, int numeroPropiedad, double Area, String CiudadPropiedad, String Coordenadas, String ColindaN, String ColindaS, String ColindaE, String ColindaO, Date FechaPago, double CantidadPago, long CodigoFactura, String CiudadPago, String Codigo, Date FechaAdquisicion, double Valor, String Direccion, ArrayList<Persona> Propietarios, Notario notario) {
         super(Area, CiudadPropiedad, Coordenadas, ColindaN, ColindaS, ColindaE, ColindaO, FechaPago, CantidadPago, CodigoFactura, CiudadPago, Codigo, FechaAdquisicion, Valor, Direccion, Propietarios, notario);
         this.Descripcion = Descripcion;
         this.TipoCerco = TipoCerco;
         this.UsoTerreno = UsoTerreno;
+        this.numeroPropiedad = numeroPropiedad;
     }
 
     public Terreno() {
         super();
+    }
+    
+    public int getNumeroPropiedad() {
+        return numeroPropiedad;
+    }
+
+    public void setNumeroPropiedad(int numeroPropiedad) {
+        this.numeroPropiedad = numeroPropiedad;
     }
 
     public String getDescripcion() {
